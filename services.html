@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - S. S. Solution</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        .services-hero {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            padding: 160px 0 80px;
+            text-align: center;
+        }
+
+        .service-section {
+            padding: 80px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .service-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-section:nth-child(even) {
+            background: var(--light-gray);
+        }
+
+        .service-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .service-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .service-content h2 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .service-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .service-content:hover h2::after {
+            width: 100%;
+        }
+
+        .service-content p {
+            margin-bottom: 20px;
+            color: var(--dark-gray);
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .service-features li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            transform: translateX(-20px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .service-section.visible .service-features li {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .service-features li:nth-child(1) { transition-delay: 0.1s; }
+        .service-features li:nth-child(2) { transition-delay: 0.2s; }
+        .service-features li:nth-child(3) { transition-delay: 0.3s; }
+        .service-features li:nth-child(4) { transition-delay: 0.4s; }
+
+        .service-features li i {
+            color: var(--primary-color);
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-features li:hover i {
+            transform: scale(1.2);
+        }
+
+        .service-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .service-image img {
+            width: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .service-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .tech-item {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .tech-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background: var(--primary-color);
+            color: white;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .service-image {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Sol Web</a>
+            <button class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Services Header -->
+    <header class="hero" style="padding: 120px 0 60px;">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Comprehensive Technology Solutions for Your Business</p>
+        </div>
+    </header>
+
+    <!-- Detailed Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up">
+                    <i class="fas fa-code"></i>
+                    <h3>Software Development</h3>
+                    <p>Custom software solutions tailored to your business needs. We specialize in:</p>
+                    <ul style="text-align: left; margin-top: 15px; list-style-type: none;">
+                        <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Web Applications</li>
+                        <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Mobile Apps</li>
+                        <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Enterprise Software</li>
+                        <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>API Integration</li>
+                    </ul>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>IT Consulting</h3>
+                    <p>Strategic guidance for digital transformation. Our consulting covers:</p>
+                    <ul style="text-align: left; margin-top: 15px; list-style-type: none;">
+                        <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Technology Assessment</li>
+                        <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Digital Strategy</li>
+                        <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Process Optimization</li>
+                        <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>IT Infrastructure</li>
+                    </ul>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable and secure cloud infrastructure services including:</p>
+                    <ul style="text-align: left; margin-top: 15px; list-style-type: none;">
+                        <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Cloud Migration</li>
+                        <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Cloud Security</li>
+                        <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>DevOps Services</li>
+                        <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>24/7 Support</li>
+                    </ul>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-brain"></i>
+                    <h3>AI Integration</h3>
+                    <p>Intelligent automation and data analytics solutions:</p>
+                    <ul style="text-align: left; margin-top: 15px; list-style-type: none;">
+                        <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Machine Learning</li>
+                        <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Data Analytics</li>
+                        <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>Process Automation</li>
+                        <li><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i>AI Consulting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Let's discuss how our services can help you achieve your goals</p>
+            <a href="contact.html" class="cta-button">Contact Us Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>S. S. Solution</h3>
+                    <p>Empowering businesses through innovative technology solutions</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> info@sssolution.com</p>
+                    <p><i class="fas fa-phone"></i> +91 7000668684 <br> +91 7440334121</p>
+                    <p><i class="fas fa-location-dot"></i> 41,42 Shubham Nagaar <br> Indore (M.P.)</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2021 S. S. Solution. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html> 

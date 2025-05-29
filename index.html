@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S. S. Solution - Technology Consulting & Software Development</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        .services {
+            padding: 80px 0;
+            background: var(--light-gray);
+        }
+
+        .services h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--secondary-color);
+            position: relative;
+        }
+
+        .services h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .services:hover h2::after {
+            width: 100px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card i {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .service-card:hover i {
+            transform: scale(1.2) rotate(360deg);
+            color: var(--secondary-color);
+        }
+
+        .service-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-size: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card h3::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 8px;
+            background: rgba(var(--primary-rgb), 0.1);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            transition: width 0.3s ease;
+        }
+
+        .service-card:hover h3::before {
+            width: 100%;
+        }
+
+        .service-card p {
+            color: var(--dark-gray);
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover p {
+            transform: translateY(5px);
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">S. S. Solution
+            </a>
+            <button class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="container">
+            <h1>Empowering Digital Success</h1>
+            <p>Transform your business with technology solutions</p>
+            <a href="#quick-contact" class="cta-button">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 data-aos="fade-down">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-code"></i>
+                    <h3>Software Development</h3>
+                    <p>Custom solutions tailored to your business needs</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>IT Consulting</h3>
+                    <p>Strategic guidance for digital transformation</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable and secure cloud infrastructure</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-brain"></i>
+                    <h3>AI Integration</h3>
+                    <p>Intelligent automation and data analytics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <!-- <section class="testimonials">
+        <div class="container">
+            <h2>Client Success Stories</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <p>"S. S. Solution transformed our operations with their innovative solutions. Their expertise in cloud technology helped us achieve unprecedented efficiency."</p>
+                    <div class="client-info">
+                        <h4>John Smith</h4>
+                        <p>CEO, Tech Innovations Inc.</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Working with S. S. Solution was a game-changer for our business. Their AI integration solutions helped us stay ahead of the competition."</p>
+                    <div class="client-info">
+                        <h4>Sarah Johnson</h4>
+                        <p>CTO, Future Systems</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Let's discuss how we can help you achieve your digital goals</p>
+            <a href="#quick-contact" class="cta-button">Contact Us Today</a>
+        </div>
+    </section>
+
+    <!-- Quick Contact Section -->
+    <section class="quick-contact" id="quick-contact">
+        <div class="container">
+            <div class="quick-contact-grid">
+                <div class="quick-contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Have a project in mind? Let's talk about how we can help you achieve your goals.</p><br><br>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Call Us</h3>
+                                <p>+91 7440334121</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email Us</h3>
+                                <p>info@sssolution.com</p>
+                            </div>
+                        </div>
+                        <!-- <div class="contact-method">
+                            <i class="fas fa-comments"></i>
+                            <div>
+                                <h3>Live Chat</h3>
+                                <p>Available 24/7</p>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="quick-contact-form">
+                    <form action="https://api.web3forms.com/submit" method="POST" id="quickContactForm">
+                         <input type="hidden" name="access_key" value="11bc9c7f-2c98-4842-a9aa-7947e8027e5c">
+                        <div class="form-group">
+                           
+                            <input type="text" placeholder="Your Name" required name="first_name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required name="email">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" required name="message"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>S. S. Solution</h3>
+                    <p>Empowering businesses through innovative technology solutions</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="#quick-contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> info@sssolution.com</p>
+                    <p><i class="fas fa-phone"></i> +91 7000668684 <br>   +91 7440334121</p>
+                    <p><i class="fas fa-location-dot"></i> 41,42 Shubham Nagaar <br>   Indore (M.P.)</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2021 S. S. Solution. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile menu functionality
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html> 

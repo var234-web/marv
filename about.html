@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - S. S. Solution</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            padding: 160px 0 80px;
+            text-align: center;
+        }
+
+        .about-content {
+            padding: 80px 0;
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .mission-card, .vision-card {
+            background: var(--light-gray);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .mission-card h3, .vision-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .leadership-team {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        .team-member h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .team-member p {
+            color: var(--dark-gray);
+            margin-bottom: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">S. S. Solution</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <!-- <li><a href="industries.html">Industries</a></li> -->
+                <li><a href="index.html#quick-contact">Contact Us</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <header class="about-hero">
+        <div class="container">
+            <h1>About S. S. Solution</h1>
+            <p>Driving digital transformation through innovation and expertise</p>
+        </div>
+    </header>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="container">
+            <!-- Mission & Vision -->
+            <div class="mission-vision">
+                <div class="mission-card">
+                    <h3>Our Mission</h3>
+                    <p>To empower businesses with innovative technology solutions that drive growth, efficiency, and digital transformation. We are committed to delivering excellence through cutting-edge solutions and exceptional service.</p>
+                </div>
+                <div class="vision-card">
+                    <h3>Our Vision</h3>
+                    <p>To be the leading technology partner for businesses worldwide, known for our innovation, reliability, and commitment to client success in the digital age.</p>
+                </div>
+                <div class="vision-card">
+                    <h3>Our Vision</h3>
+                    <p>To be the leading technology partner for businesses worldwide, known for our innovation, reliability, and commitment to client success in the digital age.</p>
+                </div>
+                <!-- <div class="vision-card">
+                    <h3>Our Vision</h3>
+                    <p>To be the leading technology partner for businesses worldwide, known for our innovation, reliability, and commitment to client success in the digital age.</p>
+                </div> -->
+            </div>
+
+            <!-- Leadership Team -->
+            <!-- <div class="leadership-team">
+                <h2>Our Leadership Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="CEO">
+                        <h4>John Doe</h4>
+                        <p>Chief Executive Officer</p>
+                        <p>20+ years of experience in technology consulting and digital transformation.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="CTO">
+                        <h4>Jane Smith</h4>
+                        <p>Chief Technology Officer</p>
+                        <p>Expert in cloud architecture and AI solutions with 15+ years of experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="COO">
+                        <h4>Michael Johnson</h4>
+                        <p>Chief Operations Officer</p>
+                        <p>Specialized in business strategy and operational excellence.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>S. S. Solution</h3>
+                    <p>Empowering businesses through innovative technology solutions</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="index.html#quick-contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> info@sssolution.com</p>
+                    <p><i class="fas fa-phone"></i>+91 7000668684 <br> +91 7440334121</p>
+                    <p><i class="fas fa-location-dot"></i> 41, 42 Shubham Nagar <br> Indore(M.P.)</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2021 S. S. Solution. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
